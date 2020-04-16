@@ -14,6 +14,7 @@ headers = {
 iterate = 0
 
 def parse_pages(url, num, iterate):
+    print('showing: '+url)
     response = requests.get(url=url, headers=headers)
     #save to html
     print('iterate '+str(iterate))
@@ -38,23 +39,22 @@ def parse_pages(url, num, iterate):
     #pagination
 
     pagination = soup.find_all('div', class_='pagination')
-    '''
+
     pages = pagination[0].find_all('a')
     print(pages)
     print('page tag count: '+str(len(pages)))
     print("next page is")
     print(pages[len(pages)-1].get('href'))
     next_page_href = "https://ca.indeed.com/"
-    next_page_href += pages[len(pages) - 1].get('href')
-    '''
+    next_page_href += pages[len(pages)-1].get('href')
+
     if pagination != 0:
         num += 1
         print('Page' + str(num) + ' crawled！')
         # 3-60秒之间随机暂停
         time.sleep(random.randint(10, 20))
-        search_index = url.find('start=')
-        print('search index'+str(search_index))
-        parse_pages(url[0:search_index+5]+str(iterate*10), num, iterate)
+        print('requsting: '+next_page_href)
+        parse_pages(next_page_href, num, iterate)
     else:
         print('All pages have been crawled！')
 
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     with open('indeed.csv', 'a', newline='', encoding='utf-8-sig') as fp:
         writer = csv.writer(fp)
     start_num = 0
-    start_url = 'https://ca.indeed.com/jobs?q=Java&l=Ottawa%2C+ON&radius=100&start=10'
+    start_url = 'https://ca.indeed.com/jobs?q=Java&l=Ottawa%2C+ON&radius=100'
     parse_pages(start_url, start_num, 0)
 
 
