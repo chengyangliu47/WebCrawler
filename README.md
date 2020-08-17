@@ -41,7 +41,7 @@ To run the scrapy crawler we need to prepare few things below.
     qurey does not contain 'start='. 
   * 'Input total job numbers to be crawled'
   
-    Find the total job number in the result site and input to this field
+    Find the total job number in the result site and input to this field. Make sure the input is integer or the program will crash.
   * 'Input User-Agent'
   
     Input the user-agent you are going to apply to send requests. The default user-agent is `Mozilla/5.0 (X11; Linux x86_64)`
