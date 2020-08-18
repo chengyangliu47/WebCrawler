@@ -10,7 +10,7 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'indeed'
-USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) '
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64)'
 SPIDER_MODULES = ['indeed.spiders']
 NEWSPIDER_MODULE = 'indeed.spiders'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

@@ -1,23 +1,20 @@
 import sys
 from multiprocessing import Process, Manager
-
 from PyQt5.QtCore import QThread
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, \
     QTextBrowser, QComboBox, QHBoxLayout, QVBoxLayout
-
 from indeed.spiders.indeed_crawler import IndeedSpider
 from scrapy.crawler import CrawlerProcess
 from scrapy.settings import Settings
-
 from indeed import settings as my_settings
 
 
-def crawl(Q, ua, is_obey, start_url, var):
+def crawl(Q, ua, is_obey, start_url, job_num):
     # CrawlerProcess
     crawler_settings = Settings()
     my_settings.USER_AGENT = ua
     my_settings.ROBOTSTXT_OBEY = is_obey
-    page = var//10
+    page = job_num//10
     crawler_settings.setmodule(my_settings)
     process = CrawlerProcess(crawler_settings)
     process.crawl(IndeedSpider, Q=Q, start_url=start_url, page=page)
@@ -38,13 +35,13 @@ class Demo(QWidget):
         self.crawl_btn = QPushButton('Start Crawling', self)  # Start Crawling
         self.crawl_btn.clicked.connect(self.crawl_slot)
 
-        # 布局
+        # Layout
         self.h_layout = QHBoxLayout()
         self.v_layout = QVBoxLayout()
         self.v_layout.addWidget(QLabel('Input start url'))
         self.v_layout.addWidget(self.url_line)
-        self.v_layout.addWidget(QLabel('Iinput total job numbers to be crawled'))
-        self.v_layout.addWidget(self.job_num)
+        self.h_layout.addWidget(QLabel('Iinput total job numbers to be crawled'))
+        self.h_layout.addWidget(self.job_num)
         self.h_layout.addWidget(QLabel('Input User-Agent'))
         self.h_layout.addWidget(self.ua_line)
         self.h_layout.addWidget(QLabel('Obey Robot.txt'))
@@ -65,11 +62,11 @@ class Demo(QWidget):
             start_url = self.url_line.text()
             ua = self.ua_line.text().strip()
             try:
-                job_num = int(self.var.text())
+                job_num = int(self.job_num.text())
             except:
                 print('Jobs number must be a integer')
             is_obey = True if self.obey_combo.currentText() == 'Yes' else False
-            self.p = Process(target=crawl, args=(self.Q, ua, is_obey, start_url, var))
+            self.p = Process(target=crawl, args=(self.Q, ua, is_obey, start_url, job_num))
             self.p.start()
             self.log_thread.start()
         else:
@@ -102,8 +99,8 @@ class LogThread(QThread):
                     self.gui.crawl_btn.setText('Start Crawling')
                     break
 
-                # Sleep 1000ms to avoid crash
-                self.msleep(1000)
+                # Sleep 300ms to avoid crash
+                self.msleep(300)
 
 
 if __name__ == '__main__':
