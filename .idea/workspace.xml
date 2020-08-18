@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caaebd50-1efd-40f7-9946-def5be2ad093" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indeed/db_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed/db_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indeed/your_file_name.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indeed/yourfile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indeed/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indeed/spiders/indeed_crawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed/spiders/indeed_crawler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,8 +129,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.db_management (1)" />
         <item itemvalue="Python.gui" />
+        <item itemvalue="Python.db_management (1)" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.db_management" />
       </list>
@@ -154,21 +155,21 @@
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597536620725" />
     <state x="2660" y="171" key="FileChooserDialogImpl/0.0.1920.1040/1920.-104.1920.1040@1920.-104.1920.1040" timestamp="1597401995049" />
-    <state width="1899" height="322" key="GridCell.Tab.0.bottom" timestamp="1597711841272">
+    <state width="1899" height="439" key="GridCell.Tab.0.bottom" timestamp="1597719443016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="322" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597711841272" />
-    <state width="1899" height="322" key="GridCell.Tab.0.center" timestamp="1597711841271">
+    <state width="1899" height="439" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597719443016" />
+    <state width="1899" height="439" key="GridCell.Tab.0.center" timestamp="1597719443016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="322" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597711841271" />
-    <state width="1899" height="322" key="GridCell.Tab.0.left" timestamp="1597711841270">
+    <state width="1899" height="439" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597719443016" />
+    <state width="1899" height="439" key="GridCell.Tab.0.left" timestamp="1597719443016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="322" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597711841270" />
-    <state width="1899" height="322" key="GridCell.Tab.0.right" timestamp="1597711841271">
+    <state width="1899" height="439" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597719443016" />
+    <state width="1899" height="439" key="GridCell.Tab.0.right" timestamp="1597719443016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="322" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597711841271" />
+    <state width="1899" height="439" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-104.1920.1040@0.0.1920.1040" timestamp="1597719443016" />
   </component>
 </project>

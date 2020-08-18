@@ -99,8 +99,8 @@ class LogThread(QThread):
                     self.gui.crawl_btn.setText('Start Crawling')
                     break
 
-                # Sleep 300ms to avoid crash
-                self.msleep(300)
+                # Sleep 400ms to avoid crash
+                self.msleep(400)
 
 
 if __name__ == '__main__':

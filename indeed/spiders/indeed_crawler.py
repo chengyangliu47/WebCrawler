@@ -18,7 +18,7 @@ class IndeedSpider(scrapy.Spider):
             page = '&start=%d' % (result_num*10)
             url = self.start_url + page
             if '%2C' in url:
-                url = url.replace('%2C', ',')
+                    url = url.replace('%2C', ',')
             #url = 'https://ca.indeed.com/jobs?q=java&l=Ottawa,+ON&start=%d' % (result_num*10)
             self.Q.put(url)
             yield scrapy.Request(url)

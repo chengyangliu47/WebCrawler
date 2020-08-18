@@ -6,7 +6,7 @@ mongo_url = "127.0.0.1:27017"
 client = pymongo.MongoClient(mongo_url)
 DATABASE = "IndeedData"
 db = client[DATABASE]
-COLLECTION = "makingStudentInformationClone"
+COLLECTION = "indeed"
 db_coll = db[COLLECTION]
 
 words = []
