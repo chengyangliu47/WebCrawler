@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caaebd50-1efd-40f7-9946-def5be2ad093" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/indeed/db_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed/db_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indeed/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indeed/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/indeed/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indeed/your_file_name.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/indeed/yourfile.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

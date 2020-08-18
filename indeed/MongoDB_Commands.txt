@@ -1,0 +1,13 @@
+#Clone a database
+db.indeed.find().foreEach(function(copyValue){db.indeed_copy.insert(copyValue)});
+
+
+#Command to group and delete duplicate documents and creat a new database
+db.indeed.aggregate([{
+     $group:{
+        _id:(jobTitle: "jobTitle", companyName: "$companyName"},
+}]).forEach(function(copyValue){db.indeed_without_duplicate.insert(copyValue)});	    
+	    
+
+#Command to delete a field in database
+db.indeed_copy.update({},{$unset:{'companyName':''}},false, true)
