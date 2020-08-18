@@ -32,6 +32,11 @@ To run the scrapy crawler we need to prepare few things below.
 ### MongoDB 4.4.0
   You can go to https://docs.mongodb.com/manual/administration/install-community/ to download the MongoDB with the msi package.During the installation make sure
   to install MongoDB as a service.The detaill instruction is given on the site. After the MongoDB is installed.
+
+### Word cloud
+You can use the command below to install the package.
+>pip install wordcloud
+
   
 ## Usage
   First to extract the zip file. Then run the gui.py with `python gui.py` in cmd, the gui should prompt should come out in few seconds. There are 5 field in the inerface.
